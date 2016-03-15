@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="us">
+<head>
+	<title>Dating web site</title>
+	<style type="text/css">
+	fieldset {
+		background-color: lightyellow;
+		border: yellow 10px solid;
+		margin-bottom: 10px;
+		width: 720px;
+	}
+
+	label {
+		width: 180px;
+		display: inline-block;
+		text-align: right;
+		vertical-align: top;
+	}
+
+	label:hover {
+		font-size: 40px;
+	}
+
+	input:hover {
+		font-size: 40px;
+	}
+
+	select:hover {
+		font-size: 40px;
+	}
+
+	.wordAroundRange {
+		display: inline-block;
+		text-align: center;
+		width: 80px;
+		background-color: red;
+	}
+
+	label input[type=checkbox], label input[type=radio], .widthAuto {
+		width: auto;
+	}
+
+	textarea {
+		width: 360px;
+		height: 50px;
+	}
+
+	</style>
+</head>
+<body>
+
+<h2>Please Enter Your Details For Our Dating Website!</h2>
+<form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" enctype="multipart/form-data">
+	<fieldset>
+		<legend>Your face</legend>
+		<label for="file">Your image:</label>
+		<input type="file" id="file" name="file" required></input><br>
+		<label for="preview">image preview:</label>
+		<img id="preview">
+	</fieldset>
+
+	<fieldset>
+		<legend>Your general details</legend>
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required></input>
+		<br>
+		<label for="gender" width="auto">Gender:</label>
+			<input type="radio" name="gender" id="gender" required>Male</input>
+			<input type="radio" name="gender" id="gender" required>Female</input>
+		<br>
+		<label for="age">Age:</label>
+			<input type="number" id="age" name="age" required></input>
+		<br>
+		<label for="birth">Date of birth:</label>
+			<input type="date" name="birth" id="birth"></input>
+		<br>
+		<label for="favorite color">Favorite color:</label>
+			<input type="color" id="favorite color" name="favorite color"></input>
+		<br>
+		<label for="country">Which Country:</label>
+		<select name="country" id="country">
+			<option>China</option>
+			<option>England</option>
+			<option>USA</option>
+			<option>Kore</option>
+			<option>Japan</option>
+			<option>Other</option>
+		</select>
+	</fieldset>
+
+	<fieldset>
+		<legend>Your indicators</legend>
+		<label for="h">Height:</label>
+		<span id="h">
+		<label class="wordAroundRange">Short</label>
+		<input type="range" id="height" name="height" min="0" max="100" value="50"></input>
+		<label class="wordAroundRange">Tall</label><br>
+		</span>
+
+		<label for="salary">Salary:</label>
+		<label class="wordAroundRange">Poor</label>
+		<input type="range" id="salary" name="salary" min="0" max="100" value="50"></input>
+		<label class="wordAroundRange">Rich</label>
+	</fieldset>
+
+	<fieldset>
+		<legend>Your Contact Information</legend>
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required></input><br>
+		<label for="mobile">Mobile:</label>
+		<input type="tel" id="mobile" name="mobile"></input><br>
+		<label for="address">Address:</label>
+		<textarea id="address" name="address"></textarea><br>
+		<label for="method to contact" class="widthAuto">Method to contact you:</label>
+		<span id="method to contact" name="method to contact">
+		<input type="checkbox" id="Email" name="Email">Email</input>
+		<input type="checkbox" id="Whatsapp" name="Whatsapp">Whatsapp</input>
+		<input type="checkbox" id="In-app chat" name="In-app chat">In-app chat</input>
+		</span>
+	</fieldset>
+
+	<input type="submit"></input>
+</form>
+
+<script src="dating_web_site.js"></script>
+
+</body>
+</html>
