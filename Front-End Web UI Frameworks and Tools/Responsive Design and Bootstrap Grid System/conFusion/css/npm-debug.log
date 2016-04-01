@@ -1,0 +1,114 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'bower' ]
+2 info using npm@2.15.0
+3 info using node@v4.4.2
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ 'bower', null ]
+7 verbose cache add spec bower
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'bower',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'bower',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed bower@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for bower
+11 info addNameTag [ 'bower', 'latest' ]
+12 silly mapToRegistry name bower
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry data Result {
+15 silly mapToRegistry   raw: 'bower',
+15 silly mapToRegistry   scope: null,
+15 silly mapToRegistry   name: 'bower',
+15 silly mapToRegistry   rawSpec: '',
+15 silly mapToRegistry   spec: 'latest',
+15 silly mapToRegistry   type: 'tag' }
+16 silly mapToRegistry uri https://registry.npmjs.org/bower
+17 verbose addNameTag registry:https://registry.npmjs.org/bower not in flight; fetching
+18 verbose request uri https://registry.npmjs.org/bower
+19 verbose request no auth needed
+20 info attempt registry request try #1 at 20:23:47
+21 verbose request id a3eecc9768d3be73
+22 verbose etag "436L91KMSESJZBW3CE6OPN7NO"
+23 http request GET https://registry.npmjs.org/bower
+24 http 304 https://registry.npmjs.org/bower
+25 verbose headers { date: 'Fri, 01 Apr 2016 12:23:48 GMT',
+25 verbose headers   via: '1.1 varnish',
+25 verbose headers   'cache-control': 'max-age=300',
+25 verbose headers   etag: '"436L91KMSESJZBW3CE6OPN7NO"',
+25 verbose headers   age: '0',
+25 verbose headers   connection: 'keep-alive',
+25 verbose headers   'x-served-by': 'cache-hkg6822-HKG',
+25 verbose headers   'x-cache': 'HIT',
+25 verbose headers   'x-cache-hits': '1',
+25 verbose headers   'x-timer': 'S1459513428.201647,VS0,VE228',
+25 verbose headers   vary: 'Accept' }
+26 silly get cb [ 304,
+26 silly get   { date: 'Fri, 01 Apr 2016 12:23:48 GMT',
+26 silly get     via: '1.1 varnish',
+26 silly get     'cache-control': 'max-age=300',
+26 silly get     etag: '"436L91KMSESJZBW3CE6OPN7NO"',
+26 silly get     age: '0',
+26 silly get     connection: 'keep-alive',
+26 silly get     'x-served-by': 'cache-hkg6822-HKG',
+26 silly get     'x-cache': 'HIT',
+26 silly get     'x-cache-hits': '1',
+26 silly get     'x-timer': 'S1459513428.201647,VS0,VE228',
+26 silly get     vary: 'Accept' } ]
+27 verbose etag https://registry.npmjs.org/bower from cache
+28 verbose get saving bower to /Users/hexin/.npm/registry.npmjs.org/bower/.cache.json
+29 verbose correctMkdir /Users/hexin/.npm correctMkdir not in flight; initializing
+30 silly addNameTag next cb for bower with tag latest
+31 silly addNamed bower@1.7.7
+32 verbose addNamed "1.7.7" is a plain semver version for bower
+33 silly mapToRegistry name bower
+34 silly mapToRegistry using default registry
+35 silly mapToRegistry registry https://registry.npmjs.org/
+36 silly mapToRegistry data Result {
+36 silly mapToRegistry   raw: 'bower',
+36 silly mapToRegistry   scope: null,
+36 silly mapToRegistry   name: 'bower',
+36 silly mapToRegistry   rawSpec: '',
+36 silly mapToRegistry   spec: 'latest',
+36 silly mapToRegistry   type: 'tag' }
+37 silly mapToRegistry uri https://registry.npmjs.org/bower
+38 verbose addRemoteTarball https://registry.npmjs.org/bower/-/bower-1.7.7.tgz not in flight; adding
+39 verbose addRemoteTarball [ 'https://registry.npmjs.org/bower/-/bower-1.7.7.tgz',
+39 verbose addRemoteTarball   '2fd7ff3ebdcba5a8ffcd84c397c8fdfe9f825f92' ]
+40 info retry fetch attempt 1 at 20:23:48
+41 info attempt registry request try #1 at 20:23:48
+42 http fetch GET https://registry.npmjs.org/bower/-/bower-1.7.7.tgz
+43 http fetch 200 https://registry.npmjs.org/bower/-/bower-1.7.7.tgz
+44 info retry will retry, error on last attempt: Error: 140735115997184:error:1408F119:SSL routines:SSL3_GET_RECORD:decryption failed or bad record mac:../deps/openssl/openssl/ssl/s3_pkt.c:532:
+45 info retry will retry, error on last attempt: Error: 140735115997184:error:1408F119:SSL routines:SSL3_GET_RECORD:decryption failed or bad record mac:../deps/openssl/openssl/ssl/s3_pkt.c:532:
+46 silly fetchAndShaCheck shasum 2fd7ff3ebdcba5a8ffcd84c397c8fdfe9f825f92
+47 verbose stack Error: shasum check failed for /var/folders/vj/hm8209d577nfjvmsw28j79rc0000gn/T/npm-62754-d270da80/registry.npmjs.org/bower/-/bower-1.7.7.tgz
+47 verbose stack Expected: 2fd7ff3ebdcba5a8ffcd84c397c8fdfe9f825f92
+47 verbose stack Actual:   e528b02ecd7a04765894d82fb759ac499cf06312
+47 verbose stack From:     https://registry.npmjs.org/bower/-/bower-1.7.7.tgz
+47 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/sha/index.js:25:8
+47 verbose stack     at ReadStream.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/sha/index.js:72:7)
+47 verbose stack     at emitNone (events.js:72:20)
+47 verbose stack     at ReadStream.emit (events.js:166:7)
+47 verbose stack     at endReadableNT (_stream_readable.js:913:12)
+47 verbose stack     at nextTickCallbackWith2Args (node.js:442:9)
+47 verbose stack     at process._tickCallback (node.js:356:17)
+48 verbose cwd /Users/hexin/tech/full-stack/Front-End Web UI Frameworks and Tools/Responsive Design and Bootstrap Grid System/conFusion/css
+49 error Darwin 15.4.0
+50 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "bower"
+51 error node v4.4.2
+52 error npm  v2.15.0
+53 error shasum check failed for /var/folders/vj/hm8209d577nfjvmsw28j79rc0000gn/T/npm-62754-d270da80/registry.npmjs.org/bower/-/bower-1.7.7.tgz
+53 error Expected: 2fd7ff3ebdcba5a8ffcd84c397c8fdfe9f825f92
+53 error Actual:   e528b02ecd7a04765894d82fb759ac499cf06312
+53 error From:     https://registry.npmjs.org/bower/-/bower-1.7.7.tgz
+54 error If you need help, you may report this error at:
+54 error     <https://github.com/npm/npm/issues>
+55 verbose exit [ 1, true ]
